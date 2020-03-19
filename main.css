@@ -1,10 +1,12 @@
 body {
     background-color: burlywood;
     text-align: center;
+    margin: 0;
 }
 
 div {
     display: block;
+    margin: 20px;
 }
 
 #logo {
@@ -109,9 +111,9 @@ table {
 
 #pasażerowie {
     text-align: left;
-    border-style: solid;
     margin-bottom: 100px;
 }
+
 
 
 
