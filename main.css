@@ -9,12 +9,12 @@ div {
     margin: 20px;
 }
 
+.główna {
+    width: 80%;
+}
+
 #logo {
     width: 10%;
-    display: block;
-    position: relative;
-    top: 2px;
-    left: 600px;
 }
 
 footer {
@@ -94,10 +94,10 @@ table {
 }
 
 .frame {
+    margin-left: 25px;
     position: absolute;
-    left: 500px;
-    width: 600px;
-    height: 300px;
+    width: 50%;
+    height: 100%;
 }
 
 #sam {
