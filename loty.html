@@ -10,58 +10,138 @@
 </head>
 <body> 
     
-    <div class="główna">
-    <h1>Lista lotów</h1>
-    <img src="logo.jpg" alt="logo firmy" id="logo">
-
-    <p id="pierwszy">Najlepsze loty!</p>
-    <p id="drugi">Loty w najlepszej cenie!</p>
-
-    <div>
-    <p id="super">Ale super lot!</p>
-    <table style="width:100%">
-        <tr>
-            <th>nr lotu</th>
-            <th>skąd</th>
-            <th>dokąd</th>
-            <th>data</th>
-            <th>godzina</th>
-        </tr>
-	    <tr>
-            <td><a href="opis.html">1.</a></td>
-            <td>Warszawa</td>
-            <td>Edynburg</td>
-            <td>03.06.2020</td>
-            <td>12:34</td>
-        </tr>
-        <tr>
-            <td><a href="opis.html">2.</a></td>
-            <td>Warszawa</td>
-            <td>Edynburg</td>
-            <td>03.06.2020</td>
-            <td>12:34</td>
-        </tr>
-        <tr>
-            <td><a href="opis.html">3.</a></td>
-            <td>Edynburg</td>
-            <td>Warszawa</td>
-            <td>05.03.2020</td>
-            <td>23:22</td>
-        </tr>
-        <tr>
-            <td><a href="opis.html">4.</a></td>
-            <td>Warszawa</td>
-            <td>Edynburg</td>
-            <td>10.03.2020</td>
-            <td>20:11</td>
-        </tr>
-    </table>
+    <div class="wrapper">
+    <div class="header">
+        <h1>Loty!</h1>
+        <img src="logo.jpg" alt="logo firmy" id="logo">
     </div>
+    <div class="główna">
+        <h2>Lista lotów</h2>
+        <p id="pierwszy">Najlepsze loty!</p>
+        <p id="drugi">Loty w najlepszej cenie!</p>
+
+        <div>
+            <p id="super">Ale super lot!</p>
+            <table>
+                <tr>
+                    <th>nr lotu</th>
+                    <th>skąd</th>
+                    <th>dokąd</th>
+                    <th>data</th>
+                    <th>godzina</th>
+                </tr>
+	            <tr>
+                    <td><a href="opis.html">1.</a></td>
+                    <td>Warszawa</td>
+                    <td>Edynburg</td>
+                    <td>03.06.2020</td>
+                    <td>12:34</td>
+                </tr>
+                <tr>
+                    <td><a href="opis.html">2.</a></td>
+                    <td>Warszawa</td>
+                    <td>Edynburg</td>
+                    <td>03.06.2020</td>
+                    <td>12:34</td>
+                </tr>
+                <tr>
+                    <td><a href="opis.html">3.</a></td>
+                    <td>Edynburg</td>
+                    <td>Warszawa</td>
+                    <td>05.03.2020</td>
+                    <td>23:22</td>
+                </tr>
+                <tr>
+                    <td><a href="opis.html">4.</a></td>
+                    <td>Warszawa</td>
+                    <td>Edynburg</td>
+                    <td>10.03.2020</td>
+                    <td>20:11</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="menu">
+        <h2>Menu</h2>
+        <ul id="mlist">
+            <li>
+                <a href="loty.html">Główna</a>
+                <ul>
+                    <li><a href="#super">Super lot</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="opis.html">Opis lotu</a>
+                <ul>
+                    <li><a href="opis.html#warszawa">Warszawa</a></li>
+                    <li><a href="opis.html#edynburg">Edynburg</a></li>
+                    <li><a href="opis.html#sam">Samolot</a></li>
+                    <li><a href="opis.html#pasażerowie">Lista pasażerów</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="https://pogoda.interia.pl/">Probnoza pogody</a>
+            </li>
+            <li>
+                <a href="https://boeing.com">Boeing</a>
+            </li>
+        </ul>
+    </div>
+    <div class="odwolane">
+        <h2>Loty odwołane/opóźnione</h2>
+        <table id="lodwolane">
+            <tr>
+                <th>skąd</th>
+                <th>dokąd</th>
+                <th>data</th>
+                <th>opóźnienie</th>
+            </tr>
+            <tr id="lekkosp">
+                <td>Warszawa</td>
+                <td>Edynburg</td>
+                <td>03.03.2020</td>
+                <td>10min</td>
+            </tr>
+            <tr id="bardzosp">
+                <td>Warszawa</td>
+                <td>Edynburg</td>
+                <td>03.03.2020</td>
+                <td>3h</td>
+            </tr>
+            <tr id="odw">
+                <td>Edynburg</td>
+                <td>Warszawa</td>
+                <td>03.03.2020</td>
+                <td>ODWOŁANE</td>
+            </tr>
+        </table>
+
+        <h2>Rezerwacja lotów</h2>
+        <form enctype="text/plain">
+            <label for="skąd">Skąd:</label>
+            <select id="skąd" name="Skąd">
+                <option>Edynburg</option>
+                <option>Warszawa</option>
+                <option>Wilno</option>
+            </select>
+            <label for="dokąd">Dokąd:</label>
+            <select id="dokąd" name="Dokąd">
+                <option>Edynburg</option>
+                <option>Warszawa</option>
+                <option>Wilno</option>
+            </select>
+            <p>Imię:</p>
+            <input>
+            <p>Nazwisko:</p>
+            <input>
+            <p>Data lotu:</p>
+            <input type="date"> <br> <br>
+            <input type="submit" value="Wyślij">
+		    <input type="reset" value="Wyczyść">
+        </form>
+    </div>
+        <footer><p>Łukasz Kamiński</p></footer>
     </div>
     
-
-
-
-    <footer><p>Łukasz Kamiński</p></footer>
 </body>
 </html>

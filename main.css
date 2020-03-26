@@ -5,12 +5,35 @@ body {
 }
 
 div {
-    display: block;
-    margin: 20px;
+    position: relative;
+    margin: 10px;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 200px 3fr 1fr;
+}
+
+.header {
+    grid-row: 1;
+    grid-column: 1 /span 3;
 }
 
 .główna {
-    width: 80%;
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.menu {
+    grid-row: 2;
+    grid-column: 1;
+    text-align: left;
+}
+
+.odwolane {
+    grid-row: 2;
+    grid-column: 3;
 }
 
 #logo {
@@ -28,25 +51,28 @@ footer {
     display: block;
 }
 
+@media (min-width: 600px) {
+footer {
+    grid-row: 3;
+    grid-column: 1 /span 3;
+    }
+}
+    
+
 #pierwszy {
     background-color: coral;
-    width: 75%;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-bottom: 0%;
 }
 
 #drugi {
     background-color: darkkhaki;
-    width: 75%;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 0%;
-}
-
-div {
-    position: relative;
-    margin-bottom: 10px;
 }
 
 td {
@@ -60,7 +86,8 @@ th {
 }
 
 table {
-    text-align: left;
+    align-self: center;
+    text-align: center;
     font-weight: 100;
     border-style: solid;
     border-collapse: collapse;
@@ -69,6 +96,9 @@ table {
     padding-right: 5px;
     padding-bottom: 5px;
     margin-bottom: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
 }
 
 #super {
@@ -114,6 +144,92 @@ table {
     margin-bottom: 100px;
 }
 
+ul {
+    list-style-type: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
+a {
+    text-decoration: none;
+}
 
+a:link, a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}
+
+#lekkosp {
+    background-color: greenyellow;
+}
+
+#bardzosp {
+    background-color: yellow;
+}
+
+#odw {
+    background-color: orange;
+}
+
+#paslista li:nth-child(2n) {
+    color: orange;
+}
+
+#paslista li:nth-child(2n+1) {
+    color: orangered;
+}
+
+#paslista li span{
+    color: black;
+    display: none;
+    border-style: solid;
+}
+
+#paslista li:hover span{
+    display: block;
+    color: black;
+}
+
+@media screen and (max-width: 600px) {
+    #warszawa {
+        display: none;
+    }
+
+    #edynburg {
+        display: none;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 100%;
+    }
+
+    .header {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .menu {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .główna {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    .odwolane {
+        grid-row: 4;
+        grid-column: 1;
+    }
+
+    .footer {
+        grid-row: 5;
+        grid-column: 1;
+    }
+}
 
