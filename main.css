@@ -11,8 +11,15 @@ div {
 
 .wrapper {
     display: grid;
+<<<<<<< HEAD
     grid-gap: 0;
     grid-template-columns: 200px auto auto;
+=======
+    grid-gap: 15px;
+    grid-template-columns: 200px 3fr 1fr;
+    opacity: 0.3;
+    pointer-events: none;
+>>>>>>> 2a6b5d289dc5d404c553d117044a8474c69b2543
 }
 
 .header {
@@ -233,7 +240,18 @@ a:hover {
     }
 }
 
+<<<<<<< HEAD
 form {
     text-align: left;
+=======
+.popup {
+    margin: 0;
+    position: fixed;
+    left: 0;
+    top: 5%;
+    height: 30%;
+    width: 100%;
+    background-color: chartreuse;
+>>>>>>> 2a6b5d289dc5d404c553d117044a8474c69b2543
 }
 
