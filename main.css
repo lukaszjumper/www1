@@ -14,7 +14,7 @@ div {
     grid-gap: 0px;
     grid-template-columns: 200px 3fr 1fr;
     opacity: 0.3;
-    pointer-events: none;
+    pointer-events: none;    
 }
 
 .header {
@@ -36,6 +36,7 @@ div {
 .odwolane {
     grid-row: 2;
     grid-column: 3;
+    margin-right: 100px;
 }
 
 #logo {
@@ -64,16 +65,16 @@ footer {
 #pierwszy {
     background-color: coral;
     width: 80%;
-    margin-left: 5%;
-    margin-right: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-bottom: 0%;
 }
 
 #drugi {
     background-color: darkkhaki;
     width: 80%;
-    margin-left: 5%;
-    margin-right: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 0%;
 }
 
@@ -98,8 +99,8 @@ table {
     padding-right: 5px;
     padding-bottom: 5px;
     margin-bottom: 40px;
-    margin-left: 5%;
-    margin-right: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
     width: 80%;
 }
 
