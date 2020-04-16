@@ -13,8 +13,7 @@ div {
     display: grid;
     grid-gap: 0px;
     grid-template-columns: 200px 3fr 1fr;
-    opacity: 0.3;
-    pointer-events: none;    
+    margin: 0;
 }
 
 .header {
@@ -89,7 +88,6 @@ th {
 }
 
 table {
-    align-self: center;
     text-align: center;
     font-weight: 100;
     border-style: solid;
@@ -102,6 +100,10 @@ table {
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
+}
+
+#lodwolane {
+    margin-bottom: 0;
 }
 
 #super {
@@ -241,12 +243,23 @@ form {
 }
 
 .popup {
+    visibility: hidden;
     margin: 0;
     position: fixed;
     left: 25%;
     top: 10%;
-    height: 25%;
+    height: auto;
     width: 50%;
     background-color: firebrick;
+}
+
+#pomiedzy {
+    height: 40px;
+    width: 120%;
+    display: inline-block;
+}
+
+#reznapis {
+    margin-top: 0;
 }
 

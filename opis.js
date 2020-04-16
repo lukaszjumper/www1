@@ -1,3 +1,4 @@
+"use strict";
 var pasazerowie = document.getElementsByTagName('li');
 function pasazerNajwiekszyNumer() {
     var nr = pasazerowie[0].getAttribute('data-numer');
@@ -8,3 +9,4 @@ function pasazerNajwiekszyNumer() {
     console.log(nr);
 }
 pasazerNajwiekszyNumer();
+//# sourceMappingURL=opis.js.map

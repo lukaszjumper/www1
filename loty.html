@@ -6,6 +6,7 @@
     <title>Loty</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="wpiszDane.js"></script>
 </head>
 <body> 
     
@@ -115,35 +116,42 @@
             </tr>
         </table>
 
-        <h2>Rezerwacja lotów</h2>
-        <form enctype="text/plain">
-            <label for="skąd">Skąd:</label>
-            <select id="skąd" name="Skąd">
+        <span id="pomiedzy"></span>
+
+        <h2 id="reznapis">Rezerwacja lotów</h2>
+        <form enctype="text/plain" id="formularz">
+            <label for="fromselect">Skąd:</label>
+            <select id="fromselect" name="Skąd">
                 <option>Edynburg</option>
                 <option>Warszawa</option>
                 <option>Wilno</option>
             </select>
-            <label for="dokąd">Dokąd:</label>
-            <select id="dokąd" name="Dokąd">
+            <label for="toselect">Dokąd:</label>
+            <select id="toselect" name="Dokąd">
                 <option>Edynburg</option>
                 <option>Warszawa</option>
                 <option>Wilno</option>
             </select> <br> <br>
             <label for="imie">Imię: </label>
-            <input id="imie"> <br> <br>
+            <input id="imie" name="name"> <br> <br>
             <label for="nazwisko">Nazwisko:</label>
-            <input id="nazwisko"> <br> <br>
+            <input id="nazwisko" name="surname"> <br> <br>
             <label for="data">Data lotu:</label>
             <input type="date" id="data"> <br> <br>
-            <input type="submit" value="Wyślij">
+            <input type="button" value="Wyślij">
 		    <input type="reset" value="Wyczyść">
         </form>
     </div>
         <footer><p>Łukasz Kamiński</p></footer>
     </div>
 
-    <div class="popup" id="error">
-        <h1>Błąd!</h1>
+    <div class="popup" id="popupok">
+        <h1>Zarezerwowano!</h1>
+        Imię: <span id="displayname"></span> <br>
+        Nazwisko: <span id="displaysurname"></span> <br>
+        Data: <span id="displaydate"></span> <br>
+        Wylot z: <span id="displayfrom"></span> <br>
+        Przylot do: <span id="displayto"></span> <br> <br>
     </div>
    
     <script src='main.js'></script>
