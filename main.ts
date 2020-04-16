@@ -35,12 +35,12 @@ function changeColor() {
   document.body.style.backgroundColor = colors[clickNumber % colors.length];
 }
 
-export function fiboNaive(index : number) : number {
+function fiboNaive(index : number) : number {
   if (index === 0) {
     return 0;
   }
   else if (index === 1) {
-    return 1;
+    return 1
   }
   else {
     return fiboNaive(index-1) + fiboNaive(index-2);
