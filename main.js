@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var fib_1 = require("./fib");
 var popup = document.getElementById("popupok");
 var wrapers = document.getElementsByClassName("wrapper");
 var wraper = wrapers[0];
@@ -28,33 +30,6 @@ var clickNumber = 0;
 function changeColor() {
     document.body.style.backgroundColor = colors[clickNumber % colors.length];
 }
-function fiboNaive(index) {
-    if (index === 0) {
-        return 0;
-    }
-    else if (index === 1) {
-        return 1;
-    }
-    else {
-        return fiboNaive(index - 1) + fiboNaive(index - 2);
-    }
-}
-function fibo(index) {
-    if (index === 0) {
-        return 0;
-    }
-    else {
-        var last = 1;
-        var seclast = 0;
-        var aux = void 0;
-        for (var _i = 1; _i < index; _i++) {
-            aux = last;
-            last = seclast + last;
-            seclast = aux;
-        }
-        return last;
-    }
-}
 function handler(event) {
     var target = event.target;
     /* if (formularz.contains(target) ||
@@ -64,7 +39,7 @@ function handler(event) {
         rezerwacjaNapis.contains(target))*/ {
         clickNumber++;
         changeColor();
-        console.log(fibo(10 * clickNumber));
+        console.log(fib_1.fibo(10 * clickNumber));
     }
 }
 odwolane.addEventListener('click', handler, false);

@@ -1,3 +1,5 @@
+import { fibo } from "./fib";
+
 const popup = document.getElementById("popupok");
 const wrapers = document.getElementsByClassName("wrapper");
 const wraper = wrapers[0] as HTMLElement;
@@ -35,35 +37,6 @@ function changeColor() {
   document.body.style.backgroundColor = colors[clickNumber % colors.length];
 }
 
-function fiboNaive(index : number) : number {
-  if (index === 0) {
-    return 0;
-  }
-  else if (index === 1) {
-    return 1
-  }
-  else {
-    return fiboNaive(index-1) + fiboNaive(index-2);
-  }
-}
-
-function fibo(index : number) : number {
-  if (index === 0) {
-    return 0;
-  }
-  else {
-    let last = 1;
-    let seclast = 0;
-    let aux : number;
-    for (let _i = 1; _i < index; _i++) {
-      aux = last;
-      last = seclast + last;
-      seclast = aux;
-    }
-    return last;
-  }
-}
-
 function handler(event : Event) {
   const target = event.target as HTMLElement;
  /* if (formularz.contains(target) ||
@@ -79,8 +52,6 @@ function handler(event : Event) {
 
 odwolane.addEventListener('click', handler, false);
 pomiedzyTablaIFormularz.addEventListener('click', handler, false);
-
-
 
 // Formularz
 
