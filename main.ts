@@ -1,5 +1,3 @@
-import { fibo } from "./fib";
-
 const popup = document.getElementById("popupok");
 const wrapers = document.getElementsByClassName("wrapper");
 const wraper = wrapers[0] as HTMLElement;
@@ -35,6 +33,23 @@ let clickNumber: number = 0;
 
 function changeColor() {
   document.body.style.backgroundColor = colors[clickNumber % colors.length];
+}
+
+function fibo(index : number) : number {
+  if (index === 0) {
+    return 0;
+  }
+  else {
+    let last = 1;
+    let seclast = 0;
+    let aux : number;
+    for (let _i = 1; _i < index; _i++) {
+      aux = last;
+      last = seclast + last;
+      seclast = aux;
+    }
+    return last;
+  }
 }
 
 function handler(event : Event) {

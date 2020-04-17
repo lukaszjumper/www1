@@ -25,4 +25,4 @@ export function fibo(index : number) : number {
       }
       return last;
     }
-  }
+}

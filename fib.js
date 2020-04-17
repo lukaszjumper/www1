@@ -17,10 +17,10 @@ function fibo(index) {
         return 0;
     }
     else {
-        var last = 1;
-        var seclast = 0;
-        var aux = void 0;
-        for (var _i = 1; _i < index; _i++) {
+        let last = 1;
+        let seclast = 0;
+        let aux;
+        for (let _i = 1; _i < index; _i++) {
             aux = last;
             last = seclast + last;
             seclast = aux;
@@ -29,4 +29,3 @@ function fibo(index) {
     }
 }
 exports.fibo = fibo;
-//# sourceMappingURL=fib.js.map
