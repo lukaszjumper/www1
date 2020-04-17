@@ -66,18 +66,21 @@ function fibo(index : number) : number {
 
 function handler(event : Event) {
   const target = event.target as HTMLElement;
-  if (formularz.contains(target) ||
+ /* if (formularz.contains(target) ||
      odwolane.contains(target) ||
      // obsługujemy też kliknięcia pomiędzy tabelą a formularzem
      pomiedzyTablaIFormularz.contains(target) ||
-     rezerwacjaNapis.contains(target)) {
+     rezerwacjaNapis.contains(target))*/ {
     clickNumber++;
     changeColor();
     console.log(fibo(10 * clickNumber));
   }
 }
 
-right.addEventListener('click', handler, false);
+odwolane.addEventListener('click', handler, false);
+pomiedzyTablaIFormularz.addEventListener('click', handler, false);
+
+
 
 // Formularz
 

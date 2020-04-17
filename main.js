@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var popup = document.getElementById("popupok");
 var wrapers = document.getElementsByClassName("wrapper");
 var wraper = wrapers[0];
@@ -40,7 +39,6 @@ function fiboNaive(index) {
         return fiboNaive(index - 1) + fiboNaive(index - 2);
     }
 }
-exports.fiboNaive = fiboNaive;
 function fibo(index) {
     if (index === 0) {
         return 0;
@@ -59,17 +57,18 @@ function fibo(index) {
 }
 function handler(event) {
     var target = event.target;
-    if (formularz.contains(target) ||
+    /* if (formularz.contains(target) ||
         odwolane.contains(target) ||
         // obsługujemy też kliknięcia pomiędzy tabelą a formularzem
         pomiedzyTablaIFormularz.contains(target) ||
-        rezerwacjaNapis.contains(target)) {
+        rezerwacjaNapis.contains(target))*/ {
         clickNumber++;
         changeColor();
         console.log(fibo(10 * clickNumber));
     }
 }
-right.addEventListener('click', handler, false);
+odwolane.addEventListener('click', handler, false);
+pomiedzyTablaIFormularz.addEventListener('click', handler, false);
 // Formularz
 function formCompleted() {
     var resDate = new Date(date.value);
