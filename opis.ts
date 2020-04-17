@@ -1,12 +1,15 @@
 let pasazerowie = document.getElementsByTagName('li');
 
 function pasazerNajwiekszyNumer() {
-    var nr = pasazerowie[0].getAttribute('data-numer');
-    for (var i=0; i<pasazerowie.length; i++) {
-        if (pasazerowie[i].getAttribute('data-numer') > nr)
-        nr = pasazerowie[i].getAttribute('data-numer');
+    let max = pasazerowie[0];
+    for (let i=1; i<pasazerowie.length; i++) {
+        const maxnr = Number(max.getAttribute('data-numer'));
+        const newnr = Number(pasazerowie[i].getAttribute('data-numer'));
+        if (maxnr < newnr) {
+            max = pasazerowie[i];
+        }
     }
-    console.log(nr);
+    console.log(max.innerHTML.replace(/<span>.*<\/span>/, ""));
 }
 
 
